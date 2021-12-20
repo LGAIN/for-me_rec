@@ -1,0 +1,16 @@
+[[redirects]]
+  from = "/*"
+  to = "/qnas.html"
+  status = 200
+  force = false
+
+  // src/router/index.js
+  {
+    path: '/404',
+    name: 'NotFound',
+    component: NotFound
+  },
+  {
+    path: '*',
+    redirect: to => { return {'name': 'NotFound'} }
+  }
